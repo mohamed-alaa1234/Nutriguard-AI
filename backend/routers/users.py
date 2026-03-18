@@ -2,8 +2,9 @@ from fastapi import APIRouter, Depends
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 
-from .. import models, schemas
-from ..database import get_db
+import models
+from .. import schemas
+from database import get_db
 from ..security import decode_access_token
 
 router = APIRouter()
